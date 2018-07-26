@@ -1,0 +1,158 @@
+.open C:/docs/spring2018/cse6242/project_work/project.db;
+
+CREATE TABLE krill_catch (
+    id integer,
+    year integer,
+    month integer,
+	group_ssmu_code text,
+	ssmu_code text,
+	scaled text,
+    weight integer
+    );
+	
+CREATE TABLE ice_area (
+    year integer,
+	month integer,
+    Weddell_Sea integer,
+    Indian_Ocean integer,
+    W_Pacific_Ocean integer,
+    Ross_Sea integer,
+    Bellingshausen_Amundsen integer,
+    Antarctic integer
+    );
+	
+CREATE TABLE ice_extent (
+    year integer,
+	month integer,
+    Weddell_Sea integer,
+    Indian_Ocean integer,
+    W_Pacific_Ocean integer,
+    Ross_Sea integer,
+    Bellingshausen_Amundsen integer,
+    Antarctic integer
+    );
+	
+CREATE TABLE global_annual_temp (
+	year integer,
+	Jan	float,
+	Feb float,
+	Mar float,
+	Apr float,
+	May float,
+	Jun float,
+	Jul float,
+	Aug float,
+	Sep float,
+	Oct float,
+	Nov float,
+	Dec float,
+	JD float,
+	DN float,
+	DJF float,
+	MAM float,
+	JJA float,
+	SON float
+	);
+	
+CREATE TABLE zone_temp(
+	Year integer, 
+	Glob float, 
+	NHem float, 
+	SHem float,
+	z_24N_90N float,
+	z_24S_24N float,
+	z_90S_24S float,
+	z_64N_90N	float,
+	z_44N_64N	float,
+	z_24N_44N	float,
+	EQU_24N	float,
+	z_24S_EQU	float,
+	z_44S_24S	float,
+	z_64S_44S	float,
+	z_90S_64S float
+	);
+
+
+CREATE TABLE all_mapppd_sites (
+	site_id text,	
+	site_name text,	
+	ccamlr_region float,
+	longitude_EPSG float,
+	latitude_EPSG float
+	);
+
+
+CREATE TABLE penguin_population(
+	site_name text,	
+	site_id	text, 
+	ccamlr_region float,
+	Longitude_EPSG float,
+	Latitude_EPSG float,
+	common_name text,	
+	day integer,	
+	month integer,
+	year integer,	
+	season_starting integer,
+	count integer,	
+	accuracy integer,
+	count_type text
+	);
+
+CREATE TABLE sh_annual_temp (
+	Year integer,
+	Jan	float,
+	Feb float,
+	Mar float,
+	Apr float,
+	May float,
+	Jun float,
+	Jul float,
+	Aug float,
+	Sep float,
+	Oct float,
+	Nov float,
+	Dec float,
+	JD float,
+	DN float,
+	DJF float,
+	MAM float,
+	JJA float,
+	SON float
+	);
+
+CREATE TABLE fish_data (
+	latitude_degree float,
+	latitude_minute float,
+	longitude_degree float,
+	longitude_minute float,
+	standard_length float,
+	total_length float,
+	weight float,
+	latitude float,
+	longitude float,
+	species text,
+	month integer,
+	year integer
+	);
+
+CREATE TABLE krill_data (
+	growth float,
+	size float,
+	length float,
+	position text,
+	position2 text,
+	month integer,
+	year integer
+	);
+	
+.separator ","	
+.import C:/docs/spring2018/cse6242/project_work/krill_catch.csv krill_catch
+.import C:/docs/spring2018/cse6242/project_work/ice_area.csv ice_area
+.import C:/docs/spring2018/cse6242/project_work/ice_extent.csv ice_extent
+.import C:/docs/spring2018/cse6242/project_work/global_annual_temp.csv global_annual_temp
+.import C:/docs/spring2018/cse6242/project_work/zone_temp.csv zone_temp
+.import C:/docs/spring2018/cse6242/project_work/all_mapppd_sites.csv all_mapppd_sites
+.import C:/docs/spring2018/cse6242/project_work/penguin_population.csv penguin_population
+.import C:/docs/spring2018/cse6242/project_work/sh_annual_temp.csv SH_Annual_Temp
+.import C:/docs/spring2018/cse6242/project_work/fish_data.csv fish_data
+.import C:/docs/spring2018/cse6242/project_work/krill_data.csv krill_data
