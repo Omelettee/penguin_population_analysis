@@ -1,4 +1,4 @@
-## penguin_population_analysis
+## Penguin Population Analysis
   - This project is designed to reveal the relationship between penguin population and environmental factors
 <br></br>
 ### 1. DESCRIPTION - Describe the package in a few paragraphs.
@@ -14,6 +14,8 @@ The model.py is written with Python, the packages are listed following:
   - from sklearn.metrics import accuracy_score 
   - from sklearn.linear_model import LinearRegression
 <br></br>
+
+
 ### 2. Implement Model
 Run the model.py in the folder of “model” with command :
 - `python  model.py`
